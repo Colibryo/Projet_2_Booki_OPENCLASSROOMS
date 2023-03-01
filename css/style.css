@@ -1,0 +1,1243 @@
+/*type, taille et gras de la police appliquée à la base à l'ensemble des éléments du body*/
+body * {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+/*marge extérieure à gauche et à droite
+ des conteneurs "title", "search" et "filter"*/
+.title,
+.search,
+.filter {
+  margin: 0 3% 0 3%;
+}
+/*marge intérieure à gauche et à droite pour les conteneurs 
+"information" et "accommodations-most-popular" */
+.information,
+.accommodations-most-popular {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+/*placement du logo et du menu en ligne de manière centrée*/
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-right: 1%;
+}
+/*dimension des marges pour le conteneur picture*/
+.nav-header picture {
+  padding-top: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/*définition des dimensions du logo (largeur + marge à droite)*/
+.logo {
+  width: 40%;
+  margin-left: 55px;
+}
+/*définition des dimensions du conteneur "menu" */
+.menu {
+  width: 25%;
+  margin-right: 1%;
+}
+/* placement en ligne et dimension
+ des liens du conteneur "menu"*/
+.menu ul {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+/*les puces de la liste prennent toute leur largeur
+ dans l'élément "menu"*/
+.menu li {
+  width: 100%;
+}
+/*lien: transformé en élément bloc, définition d'une largeur automatique
+ et marges intérieures; ciblé avec un curseur;changement de couleur au survol du lien,
+ bordure transparente en haut pour prévoir la place de celle apparente au survol  */
+.menu a {
+  display: block;
+  width: auto;
+  padding: 62px 10px 15px 10px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  border-top: solid transparent;
+}
+/*au survol des liens du "menu" :apparition d'une bordure
+ en haut avec changement de couleur*/
+.menu ul a:hover {
+  border-top: solid;
+  color: #0065fc;
+}
+/*titre du header : définition de ses marges, taille 
+et gras de sa police*/
+.title h1 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+/*marges sur le paragraphe du titre de la parge d'accueil*/
+.title p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+/*placement des élements du formulaire en ligne,
+ largeur du formulaire en automatique*/
+.search {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+/*définition de la position, bordure et couleurs de l'icone du formulaire*/
+.fa-location-dot {
+  position: absolute;
+  padding: 13.5px 15.375px 13.5px 15.375px;
+  border-radius: 12px 0 0 12px;
+  color: black;
+  background-color: #f2f2f2;
+}
+/*champ de texte du formulaire, définition de :
+ sa position, sa dimension, curseur au survol; 
+ suppression de toute bordure*/
+#input-location {
+  position: relative;
+  left: 42px;
+  width: auto;
+  height: 42px;
+  padding-left: 10px;
+  padding-right: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+/*positionnement du bouton du formulaire*/
+.button-search {
+  position: relative;
+  left: 40px;
+}
+/*mise en forme spécifique du bouton avec le texte "rechercher"position, bordure, dimension, police et couleurs*/
+.button-text {
+  height: 42px;
+  padding: 11px 15px 11px 15px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: #0065fc;
+  cursor: pointer;
+}
+/*partie filtre:
+-titre et conteur des boutons mis en ligne   
+-retour à la ligne si dépassement
+-définition de la marge entre le titre et les boutons */
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+/*définition du gras de la police et taille du titre du filtre*/
+.filter h2 {
+  font-weight: 700;
+  padding-right: 10px;
+}
+/*Conteneur englobant l'ensemble des boutons du filtre:
+- mise en ligne des ses éléments, centrage des éléments,
+ - retour à la ligne si dépassement des éléments du conteneur,
+ - marge entre les boutons*/
+.container-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/*conteneur englobant les éléments à l'intérieur de chaque bouton du filtre:
+-mise en ligne et centrage de ses éléments (icone et texte)
+-mise en forme de la bordure,
+-couleur de fond rajoutée,
+-apparition du curseur au survol */
+.filter .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  padding-left: 5px;
+  padding-right: 10px;
+  border: solid 1px #cdcdcd;
+  border-radius: 45px 45px;
+  background-color: white;
+  cursor: pointer;
+}
+/*mise en forme de l'icone des boutons du filtre:
+défintions du positionnement centré et à gauche, dimensionnement,bordure arrondie*/
+.btn i {
+  position: relative;
+  right: 5.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0065fc;
+  font-size: 15px;
+  background-color: #deebff;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+}
+/*gras de la police des boutons du filtre*/
+.btn {
+  font-weight: 700;
+}
+/*effet au survol du boutondu filtre:
+changement couleur du fond et de la police */
+.filter .btn:hover {
+  background-color: #0065fc;
+  color: white;
+}
+/*effet quand le bouton du filtre est activé : 
+apparition d'une bordure bleue autour*/
+.filter .btn:active {
+  box-shadow: 0px 0px 2px 2px #0065fc;
+}
+/*mise en ligne des éléments du conteneur "information", indication de 
+ses marges et celles entre ses éléments (titre /icone) et*/
+.information {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 10px;
+  margin: 10px 0 10px 10px;
+}
+/*centrage et dimensionnement de l'icone du conteneur
+ "information", ajout de sa couleur et bordures ronde*/
+.icon-info .fa-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #0065fc;
+  border: solid 1px #cdcdcd;
+  border-radius: 50%;
+  padding: 10px;
+  width: 12px;
+  height: 12px;
+}
+/*positionnement et largeur automatique du
+ paragraphe dans le conteneur "information"*/
+.information p {
+  position: relative;
+  top: 2px;
+  width: auto;
+}
+/*mise en ligne des div "accommodations" et "most-popular"*/
+.accommodations-most-popular {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+/*mise en colonne des éléments (titre, conteneur 
+des cartes et sous-titre) de la div "accommodations" 
+avec sa mise en forme : arrondie de sa bordure, ses
+dimensions  et couleur de fond */
+.accommodations {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 25px;
+  width: 67%;
+  height: 590px;
+  margin: 0;
+  background-color: #f2f2f2;
+  padding-top: 20px;
+}
+/* marge du titre dans la partie "hébergements"*/
+#title-accommodations {
+  padding: 1%;
+}
+/*défintion du gras et taille de la police du
+ titre de la partie "accommodations" ainsi que
+ son positionnement grace en précisant une marge extérieure */
+#title-accommodations h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 2% 0 0 4%;
+}
+/*mise en colonne et centrage des éléments (cartes) de la div 
+"container-accommodation" avec retour automatique
+ si dépassement, définition de ses dimensions*/
+.container-accommodations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 560px;
+}
+/*liens entourant les cartes "hébergements": 
+comportement remplacé pour prendre celui des cartes
+(éviter un effet de dépassement du lien), et suppression
+ du style par défaut*/
+.link-accommodation {
+  display: contents;
+  text-decoration: none;
+}
+/*mise en forme des cartes "hébergements":
+dimensionnement, couleur de fond, création 
+d'une bordure arrondie autour de l'image,
+création d'un espacement entre les cartes,
+le dépassement des images de la carte est empêché*/
+.card-accommodation {
+  width: 28%;
+  height: 190px;
+  margin: 15px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px #959595;
+  border: solid 5px transparent;
+  overflow: hidden;
+}
+/*agrandissement des cartes "hébergement" au survol*/
+.card-accommodation:hover {
+  transform: scale(1.05);
+}
+/*dimensionnement de la div entourant les 
+images des cartes "hébergements"*/
+.card-accommodation .card-img {
+  width: 102%;
+  height: 60%;
+  border-radius: 20px 20px 0 0;
+}
+/*dimensionnement de images des cartes "hébergements"
+avec ajustement de l'image au conteneur et bordure*/
+.card-accommodation img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+/*utlisation de flex pour espacer le titre, 
+le paragraphe et la partie "avis" en pied de page 
+des cartes "hébergement" , définition des 
+dimensions de la div et arrondie de la bordure en bas*/
+.card-accommodation .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 40%;
+  border-radius: 0 0 20px 20px;
+}
+/*titre des cartes "hébergements" définition de
+sa taille et gras de police, marge et couleur*/
+.card-title-accommodation h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 3% 2% 2% 5%;
+  color: black;
+}
+/*mise en forme du titre des cartes "hébergements" défintion de: 
+sa taille de police, marges et couleur*/
+.card-text-accommodation p {
+  font-size: 12px;
+  margin: 0 2% 1% 5%;
+  color: black;
+}
+/*mise en ligne et centrage des icones
+ dans la partie "avis" des cartes "hébergements"
+ avec espacement des icones et marges sur les éléments*/
+.card-accommodation .card-view {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+  margin: 0 5% 2% 5%;
+}
+/*taille des étoiles dans les cartes "hébergements" */
+.fa-star {
+  font-size: 11px;
+}
+/*couleur des étoiles quand l'utilisateur est satisfait*/
+.good-point {
+  color: #0065fc;
+}
+/*couleur des étoiles quand l'utilisateur n'est pas satisfait */
+.dissatisfaction {
+  color: #b4b0b0c9;
+}
+/*définition de la largeur et marges du pied de page 
+de la partie "hébergements"*/
+.footer-accommodations {
+  width: 68%;
+  margin: 0 5% 3% 5%;
+}
+/*lien du pied de page "afficher plus": 
+style par défaut supprimé et définition de la couleur du lien*/
+.footer-accommodations a {
+  text-decoration: none;
+  color: black;
+}
+/*au survol du lien "afficher plus" la couleur change*/
+.footer-accommodations a:hover {
+  color: #0065fc;
+}
+/*gras du titre et lien "afficher plus" */
+.footer-accommodations h2 {
+  font-weight: 700;
+}
+/*mise en colonne et centrage des éléments de la partie 
+"les plus populaires" avec définition :
+-de la dimension du conteneur, 
+-de la bordure arrondie, 
+-des marges*/
+.most-popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  width: 30%;
+  height: 590px;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  margin-left: 3%;
+  padding-top: 20px;
+}
+/*mise en ligne des éléments consitutant le titre 
+de la partie "les plus populaires" afin d'espacer
+ le titre et l'icone placée à droite, suppresion de la marge*/
+.title-most-popular {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+/*taille et gras de la police du titre de la partie
+"les plus populaires*/
+.title-most-popular h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+/*mise en forme de l'icone du titre dans la partie
+"les plus populaires" (taille et couleur)*/
+.title-most-popular i {
+  color: black;
+  font-size: larger;
+}
+/*mise en colonne et centrage des éléments (cartes) 
+de la partie "les plus populaires", 
+dimensionnement du conteneur et ses marges */
+.container-most-popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+/*lien des cartes "les plus populaires":
+-le comportement du lien est celui de la carte 
+(pour empêcher le débordement du lien),
+-le style par défaut du lien est supprimé*/
+.link-card-most-popular {
+  display: contents;
+  text-decoration: none;
+}
+/*mise en ligne et centrage des éléments des cartes 
+"les plus populaires" (image et partie contenant
+ titre, paragraphe et avis , mise en forme des cartes: 
+-dimensions, 
+- couleur du fond, 
+-ombre sur les cartes, 
+-arrondie de la bordure,
+- espacement des cartes*/
+.card-most-popular {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 135px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px #959595;
+  margin: 15px;
+  border: solid 5px transparent;
+}
+/*agrandissement des cartes "les plus populaires" au survol*/
+.card-most-popular:hover {
+  transform: scale(1.05);
+}
+/*centrage de l'image avec flex : effet loupe 
+ (permet de réduire l'image dans sa hauteur)
+ définition des dimensions du conteneur de l'image
+ et le dépassement de l'image est caché
+ */
+.card-most-popular .card-img {
+  display: flex;
+  align-items: center;
+  width: 43%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+}
+/*images des cartes "les plus populaires " 
+défintion de leur taille, bordure arrondie 
+et dimension en fonction du conteneur
+ */
+.card-most-popular img {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+}
+/*corps des cartes "les plus populaires" (éléments = titre,
+ paragraphe et avis) définition de :
+ -sa taille,
+ -l'alignement en colonne de ses éléments,
+ -bordure arrondie sur la droite,
+ -marge  */
+.card-most-popular .card-body {
+  width: 58%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0 20px 20px 0;
+  margin: 0 4% 0 4%;
+}
+/*mise en forme du titre des cartes "les plus populaires":
+couleur, police et marges*/
+.card-most-popular h3 {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+/*mise en forme du paragraphe des cartes "les plus populaires":
+couleur, police et marges*/
+.card-most-popular p {
+  font-size: 12px;
+  color: black;
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+/*mise en ligne et centrage des icones "étoiles" 
+dans la partie "avis" des cartes "les plus populaires", 
+avec espacement entre les icones et marge en bas*/
+.card-most-popular .card-view {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 6%;
+}
+/*conteneur de la partie "activités" de la page
+ d'accueil avec définition de:sa taille et ses marges */
+.activities {
+  width: 100%;
+  height: 540px;
+  padding: 0;
+  margin-bottom: 50px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+/*marges intérieures du titre du conteneur "activités*/
+#title-activities {
+  padding-top: 2%;
+}
+/*mise en forme de la polie du titre de la partie "activités*/
+#title-activities h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+/*dans le conteneur de la partie "activités":
+-mise en colonne et centrage des éléments (cartes) avec retour
+ automatique si les cartes dépassent du conteneur
+ - le conteneur prend toute la largeur et suppression des marges*/
+.container-activities {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 420px;
+  margin: 0;
+  padding: 0;
+}
+/*lien des cartes dans la partie "activités":
+-le lien prend le comportement de la carte
+ pour empêcher le débordement,
+ -le style par défaut est supprimé */
+.link-activities {
+  display: contents;
+  text-decoration: none;
+}
+/*conteneur de la carte "activités" n°1 et 4 (conteneurs utilisés pour
+ définir la taille des cartes de la plus grande 
+ à la plus petite : lg > sm > xs > xxs > xxxs) définition de :
+ leur largeur et hauteur, bordure et couleur du fonds */
+.container-card-lg {
+  width: 22%;
+  height: 420px;
+  border-radius: 25px;
+  margin-right: 4%;
+  background-color: white;
+}
+/*effet d'aggrandissement des grandes cartes au survol*/
+.container-card-lg:hover {
+  transform: scale(1.05);
+}
+/*carte "activités" n° 2 : définition de ses dimensions et marges, arrondi 
+de bordure et couleur de fond*/
+.container-card-sm {
+  width: 22%;
+  height: 240px;
+  border-radius: 25px;
+  margin-right: 4%;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+/*effet d'aggrandissement des grandes cartes au survol*/
+.container-card-sm:hover {
+  transform: scale(1.05);
+}
+/*carte "activités" n° 3:définition de ses dimensions et marges, arrondi 
+de bordure et couleur de fond*/
+.container-card-xxxs {
+  width: 22%;
+  height: 140px;
+  border-radius: 25px;
+  margin-right: 4%;
+  background-color: white;
+}
+/*effet d'aggrandissement des grandes cartes au survol*/
+.container-card-xxxs:hover {
+  transform: scale(1.05);
+}
+/*carte "activités" n° 5 : définition de sa dimension, arrondi 
+de bordure et couleur de fond*/
+.container-card-xxs {
+  width: 22%;
+  height: 180px;
+  border-radius: 25px;
+  margin-bottom: 40px;
+  background-color: white;
+}
+/*effet d'aggrandissement des grandes cartes au survol*/
+.container-card-xxs:hover {
+  transform: scale(1.05);
+}
+/*carte "activités" n° 6: définition de sa dimension, arrondi 
+de bordure et couleur de fond*/
+.container-card-xs {
+  width: 22%;
+  height: 200px;
+  border-radius: 25px;
+  background-color: white;
+}
+/*effet d'aggrandissement des grandes cartes au survol*/
+.container-card-xs:hover {
+  transform: scale(1.05);
+}
+/*cartes "activités" - définition de:
+leur taille, ombre et bordure arrondie*/
+.card-activity {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px #959595;
+}
+/*carte "activités" n°1 et 4: dimension du conteneur 
+de  l'image des cartes "activités" avec défintion des 
+bordures arrondies et débordement de l'image masqué */
+.container-card-lg .card-img {
+  width: 100%;
+  height: 370px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+/*carte "activités" n°1 et 4 :
+définition des dimensions de l'image en
+ fonction du connteneur et bordure arrondies*/
+.container-card-lg img {
+  width: 100%;
+  height: 115%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+/*carte "activités" n°2: dimension du conteneur 
+de  l'images de la carte "activités" définition 
+des bordures arrondies et masquage du débordement de l'images */
+.container-card-sm .card-img {
+  width: 100%;
+  height: 190px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+/*carte "activités" n°2 :définition des dimensions 
+de l'image en fonction du connteneur et bordure arrondies*/
+.container-card-sm img {
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+/*carte "activités" n°3: dimension du conteneur 
+de  l'images de la carte "activités" 
+définition des bordures arrondies et masquage 
+du débordement de l'images */
+.container-card-xxxs .card-img {
+  width: 100%;
+  height: 90px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+/*carte "activités" n°3 :
+défintion des dimensions de l'image en fonction
+ du connteneur et bordure arrondies*/
+.container-card-xxxs img {
+  width: 100%;
+  height: 155%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+/*carte "activités" n°5: dimension du conteneur 
+de  l'images de la carte "activités" 
+définition des bordures arrondies et masquage 
+du débordement de l'images */
+.container-card-xxs .card-img {
+  width: 100%;
+  height: 130px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+/*carte "activités" n°5 :définition des dimensions de l'image en
+ fonction du connteneur et bordure arrondies*/
+.container-card-xxs img {
+  width: 100%;
+  height: 142%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+/*carte "activités" n°6: dimension du conteneur 
+de  l'images de la carte "activités" avec définition 
+des bordures arrondies et masquage du débordement de l'images */
+.container-card-xs .card-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+/*carte "activités" n°6 : définition des dimensions de l'image en
+ fonction du connteneur et bordures arrondies*/
+.container-card-xs img {
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+/*définition des bordures des cartes "activités"*/
+.title-card-activity {
+  border-radius: 25px 25px 0 0;
+}
+/*titres des cartes "activités : définition de la couleur, 
+police et centrage*/
+.title-card-activity h3 {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  vertical-align: middle;
+  padding-left: 6%;
+}
+/*pied de la page d'accueil:
+définition de sa dimension, marge et couleur de fond*/
+footer {
+  width: 100%;
+  height: 220px;
+  padding: 3%;
+  background-color: #f2f2f2;
+}
+/*conteneur du pied de page :
+-mise en ligne des éléments (liste avec liens) avec retour automatique
+des éléments,
+-prend toute la largeur et hauteur du footer*/
+.nav-footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+/*suppression de la marge à gauche dans la liste à puces du pied
+de page*/
+footer ul {
+  padding-left: 0;
+}
+/*liste à puce du piede de page: suppression du style par défaut  
+et définition de la marge du bas*/
+footer ul li {
+  list-style: none;
+  margin-bottom: 2%;
+}
+/*couleur des liens au survol dans la liste à puces*/
+footer ul li :hover {
+  color: #0065fc;
+}
+/*liens dans la liste à puces: suppression du style par défaut  
+et définition de leur couleur*/
+footer a {
+  text-decoration: none;
+  color: black;
+}
+/*titres de pied de page: définition  de leur police (taille et gras)
+et marge du bas*/
+.footer-ul h2 {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+/*mediaqueries pour tablettes:
+la page bascule au format tablettes en dessous de 992px*/
+@media all and (max-width: 991px) {
+
+  /*modification de la taille du logo*/
+  #logo {
+    width: 40%;
+  }
+  /*modification des dimensions du menu*/
+  .menu {
+    width: 35%;
+    padding: 0;
+  }
+  /*modification de la taille du logo*/
+  .filter {
+    gap: 0;
+  }
+  /*modification de la direction du conteneur des sections "hébergement" et "les plus populaires" (ce dernier passant au dessus) 
+  et sa largeur définies par le navigateur*/
+  .accommodations-most-popular {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  /*modification des marges, taille et couleur de fond de la partie */
+  .most-popular {
+    margin: 0 0 40px 0;
+    width: 100%;
+    height: 280px;
+    background-color: #deebff;
+  }
+  /*ajustement de l'écartement entre le titre et
+   l'icone dans la partie "les plus populaires" et modification des marges*/
+  .title-most-popular {
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  /*les cartes changent de direction pour passer en ligne
+   dans la partie "les plus populaires" et modification de ses dimensions pour prendre toute la 
+   largeur et hauteur automatique (définie par le navigateur)*/
+  .container-most-popular {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+  /*changement de la taille du conteneur de la 
+partie "hébergements et de sa couleur de fond*/
+  .accommodations {
+    width: 100%;
+    background-color: #deebff;
+  }
+  /*modification de la largeur et hauteur du conteneur des cartes "hébergements"*/
+  .container-accommodations {
+    width: auto;
+    height: 450px;
+  }
+  /*changement de couleur du pied de page*/
+  footer {
+    background-color: #deebff;
+  }
+}
+
+/*mediaqueries : permet de cacher l'icone du formulaire
+entre la taille maximum du desktop et le minimum de 769px*/
+@media all and (min-width: 767px) {
+  .button-icon {
+    display: none;
+  }
+}
+/*mediaqueries : changement du style pour les mobiles*/
+@media all and (max-width: 767px) {
+/*modification des marges des conteneurs
+pour aligner avec les autres conteneurs */
+  .information,
+  .accommodations-most-popular {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  /*modification des marges pour les conteneurs*/
+  .search,
+  .filter,
+  .information,
+  .title-most-popular,
+  .container-most-popular,
+  .accommodations,
+  .container-activities,
+  footer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  /*modifications du header: 
+  -Eléments en ligne mis en colonne 
+  - espacements début et fin, également entre ses éléments */
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  /*Modification du conteneur:
+  -Eléments en ligne mis en colonne et modification leur espacement
+  -ses dimensions (largeur et marge)  */
+  .nav-header {
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  /*logo aligné au centre */
+  picture {
+    text-align: center;
+  }
+  /*ajustement de la marge et largeur du logo*/
+  .logo {
+    margin-left: 0;
+    width: 90%;
+  }
+  /*modifications de la largeur et marges du menu dans le header*/
+  .menu {
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  /*modification des marges de la liste à puces*/
+  .menu ul {
+    margin-top: 0;
+    padding: 0;
+  }
+  /*modifications dans le menu:la largeur prend celle caculée par le navigateur,
+  couleur de bordures en dessous des liens*/
+  .menu a {
+     width: auto;
+     padding: 20px;
+    border-bottom: solid #f2f2f2;
+  }
+/* apparition d'une bordureau survol des liens du menu */
+  .menu ul a:hover {
+    border-top: solid transparent;
+    border-bottom: solid;
+  }
+  /*modifications des marges et alignement du titre dans le header*/
+  .title {
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+/*changement de la largeur et marges du titre dans le header*/
+  .title h1 {
+    width: auto;
+    padding-top: 0;
+    margin: auto;
+  }
+  /*en dessous du titre du header, changement de largeur
+   et marge du paragraphe */
+  .title p {
+    width: auto;
+    margin-top: 10px;
+  }
+  /*application de la propriété flex pour mettre en ligne 
+  et centrer les éléments du formulaire, ajusté avec la modification de la marge */
+  .search {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+  }
+  /*changements de largeur, bordure et son arrondi,
+  et marges du champ de texte dans le formulaire */
+  #input-location {
+    width: 100%;
+    text-indent: 0px;
+    border: solid #f2f2f2;
+    border-left: none;
+    border-right: none;
+    border-radius: 0 12px 12px 0;
+    left: 42px;
+    padding-left: 10px;
+    padding-right: 42px;
+    margin-right: 42px;
+  }
+  /*suppression du bouton "rechercher"*/
+  .button-text {
+    display: none;
+  }
+  /*position du bouton avec icone dans le formulaire*/
+  .button-search {
+    position: relative;
+    left: 0px;
+  }
+  /*bouton avec icone dans le formulaire - définition de:
+  -ses dimensions, couleur et couleur de fond, bordure et curseur */
+  .button-icon {
+    height: 42px;
+    padding: 13.5px 13.5px 13.5px 13.5px;
+    color: white;
+    background-color: #0065fc;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  /*changement des marges de la partie filtre pour centrer les éléments*/
+  .filter {
+    margin: auto;
+    margin-top: 10px;
+  }
+/*alignement du conteneur "information" aux autres avec suppresion de la marge à gauche*/
+.information{
+  margin-left:0;
+}
+  /*Modifications du paragraphe dans le conteneur "information": 
+  largeur passée en automatique et marge intérieure */
+ .information p {
+    width:auto;
+    padding-right: 5px;
+  }
+  /*modifications du conteneur "les plus populaires": 
+  prend toute la largeur, hauteur automatique,suppression 
+  de l'arrondi de la bordure, couleur de fonds du desktop remise  */
+  .most-popular {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #f2f2f2;
+  }
+/*suppresion de marge pour le titre de la partie "les plus populaires*/
+  .title-most-popular {
+    margin: 0;
+  }
+/*modification en largeur automatique pour le titre de la 
+  partie "les plus populaires"*/
+  .title-most-popular h2 {
+    width: auto;
+  }
+ /*modifications du conteneur dans la partie "les plus populaires":
+ -prend toute la largeur,
+ -hauteur automatique,
+ -chagement de direction des éléments (cartes) en colonne avec espacement
+ au début et fin ainsi qu'entre les éléments,
+ -marge mise en bas*/
+  .container-most-popular {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-content: space-around;
+    padding-bottom:30px;
+  }
+/* modifications des cartes dans la partie "les plus populaires:
+prend la plus grande largeur et définition de sa hauteur*/
+  .card-most-popular {
+    width: 100%;
+    height: 135px;
+  }
+  /*changement de la largeur du titre des cartes "les 
+  plus populaires en largeur automatique*/
+  .card-most-popular h3 {
+    width: auto;
+  }
+  /*changment de la largeur du paragraphe des cartes "les plus populaires"
+  en largeur automatique*/
+  .card-most-popular p {
+    width: auto;
+    color: black;
+  }
+  /*modifications de la partie "hébergements: 
+  -largeur et hauteur automatique, 
+  -suppression de bordure, 
+  -chagement de couleur du fond (différent de la version tablette),
+  -marge ajoutée en bas*/
+  .accommodations {
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 0;
+    margin-bottom: 2%;
+  }
+/*suppression de la marge à gauche du titre dans la partie "hébergements*/
+  #title-accommodations h2 {
+    margin-left: 0;
+  }
+  /*modification de l'élément contenant les cartes "hébergements"
+  - changement de direction en colonne pour les cartes
+  -prend toute la largeur et hauteur automatique
+  - */
+  .container-accommodations {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  /*modifications des cartes  "hébergements" :
+  prend toute la largeur et définition d'une nouvelle hauteur;*/
+  .card-accommodation {
+    width: 100%;
+    height: 200px;
+  }
+/*ajustement de la hauteur du conteneur des images 
+dans la partie "hébergement"*/
+  .card-accommodation .card-img {
+    height: 57%;
+  }
+/*marge mise en haut du */
+  .card-accommodation .card-body {
+    margin-top: 2%;
+  }
+  /*modification du titre des cartes  "hébergements": 
+  mis en largeur automatique et marges pour ajuster sa position*/
+  .card-title-accommodation h3 {
+    width: auto;
+    margin: 2% 2% 1% 5%;
+  }
+/*modifications du paragraphe des cartes "hébergements": 
+mis en largeur automatique et marges pour ajuster son positionnement */
+  .card-text-accommodation p {
+    width: auto;
+    margin: 0 2% 0 5%;
+  }
+  /*passage en largeur automatique du conteneur des avis 
+  dans les cartes "hébergements" */
+  .card-accommodation .card-view {
+    width: auto;
+  }
+  /*marges extérieures modifiées pour ajuster le conteneur du footer
+  en pied de page de la partie "hébergements"*/
+  .footer-accommodations {
+    margin: 2% 5% 3% 0;
+  }
+  /*modifications du conteneur des cartes "activités" : 
+  -marges intérieures gauche et droite supprimées
+  -hauteur automatique*/
+  .activities {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+  }
+  /*ajustement de la position du titre de la partie "activités"
+  définition de la marge à gauche et marge en bas*/
+  #title-activities {
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+  /*modification du conteneur des cartes "activités":: 
+  -changement de direction des cartes en colonnes
+  -prend toute la largeur et hauteur automatique */
+  .container-activities {
+    width: 100%;
+    height: auto;
+  }
+  /*changement de la taille des toutes 
+  les cartes de la partie "activités" et 
+  définition d'une marge en bas */
+  .container-card-lg,
+  .container-card-sm,
+  .container-card-xs,
+  .container-card-xxs,
+  .container-card-xxxs {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+  /*défintion de la même taille des conteneur
+   des images de la partie "activités"*/
+  .container-card-lg .card-img,
+  .container-card-sm .card-img,
+  .container-card-xs .card-img,
+  .container-card-xxs .card-img,
+  .container-card-xxxs .card-img {
+    width: 100%;
+    height: 155px;
+  }
+  /*définition de la hauteur des images des cartes "activités"*/
+  .container-card-lg img,
+  .container-card-sm img,
+  .container-card-xs img,
+  .container-card-xxs img,
+  .container-card-xxxs img {
+    height: 147%;
+  }
+  /*modifications du footer de la page d'accueil: 
+  -remis couleur de fond du desktop,
+  -définition de sa hauteur (palce pour les éléments)
+  -ajustement de la marge intérieure en bas*/
+  footer {
+    background-color: #f2f2f2;
+    height: 400px;
+    padding-top: 40px;
+  }
+  /*modification du conteneur du footer de la page d'accueil: 
+  -prend toute la hauteur du footer, 
+  -suppression du retour automatique des éléments en cas de débordement
+  -définition de l'espacement avec flex (espace début, fin et entre 
+  les éléments,
+  -suppression de la marge intérieur à gauche*/
+  .nav-footer {
+    height: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-left: 0;
+  }
+  /*suppression des marges en haut et en bas de la liste à puces du 
+  footer de la parge d'accueil*/
+  .nav-footer ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /*modifications des titres des listes à puces du footer
+  de la page d'accueil: largeur mise en automatique, 
+  et définition des marges intérieure en bas et
+   de la marge extérieure en haut */
+  .footer-ul h2 {
+    width: auto;
+    padding-bottom: 5px;
+    margin-top: 0;
+  }
+  /*  la largeur est mise en automatiue pour les liens 
+  de la partie footer de la page d'accueil  */
+  .footer-ul li a {
+    width: auto;
+  }
+
+}
